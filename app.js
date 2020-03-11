@@ -17,8 +17,16 @@ console.log(ProGrad_2)
 // - The driver has the longest name, it has XX characters. or
 // - It seems that the navigator has the longest name, it has XX characters. or
 // - Wow, you both have equally long names, XX characters!.
-var len1=ProGrad_1.length;
-var len2=ProGrad_2.length;
+
+function len(str)
+{
+    var length=0;
+    while (str[length] !== undefined)
+    length++;
+  return length;
+}
+var len1=len(ProGrad_1);
+var len2=len(ProGrad_2);
 if(len1>len2)
 {
     console.log("the driver "+ProGrad_1+" has the longest name "+len1+"  characters");
@@ -39,7 +47,7 @@ else{
 var i,c=0;
 for(i=0;i<len1;i++)
 {
-    if(ProGrad_1[i]=='a'|| ProGrad_1.charAt(i)=='e'|| ProGrad_1.charAt(i)=='i'||ProGrad_1.charAt(i)=='o'|| ProGrad_1.charAt(i)=='u')
+    if(ProGrad_1[i]=='a'|| ProGrad_1[i]=='e'|| ProGrad_1[i]=='i'||ProGrad_1[i]=='o'|| ProGrad_1[i]=='u')
     {
         console.log(ProGrad_1[i]);
         c++;
