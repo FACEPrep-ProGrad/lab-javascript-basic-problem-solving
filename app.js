@@ -1,91 +1,105 @@
 // Important Note - No Built-in functions to be used
+
 // Progression 1: Names and Input
 
 // 1.1 Create a variable `ProGrad-1` with the driver's name.
-
-let prograde1 = 'Shrikantkumar';
-
 // 1.2 Print `"The driver's name is XXXX"`.
-console.log(prograde1);
 // 1.3 Create a variable `ProGrad-2` with the navigator's name.
-let prograde2 = 'Koushik';
 // 1.4 Print `"The navigator's name is YYYY"`.
-console.log(prograde2);
+let prograd_1 = "Shrikant";
+console.log("the drive name is " + prograd_1);
+let prograd_2 = "Kaushik";
+console.log("the navigator's is " + prograd_2);
+let n_1 = prograd_1.length;
+let n_2 = prograd_2.length;
 
+//console.log(n_1);
+//console.log(n_2);
 
 // Progression 2: Control Statements - 1
 // 2.1. Depending on which name is longer, print:
 // - The driver has the longest name, it has XX characters. or
 // - It seems that the navigator has the longest name, it has XX characters. or
 // - Wow, you both have equally long names, XX characters!.
-var len1 = Prograd1.length;
-var len2 = Prograd2.length;
-if (len1 > len2) {
-    console.log(`The driver has the longest name, it has ${len1} characters.`);
-    document.write(`The driver has the longest name, it has ${len1} characters.<br>`);
-} else if (len1 < len2) {
-    console.log(`The navigator has the longest name, it has ${len2} characters.`);
-    document.write(`The navigator has the longest name, it has ${len2} characters.<br>`);
+if (n_1 == n_2) {
+  console.log("we both have same number " + n_1);
+} else if (n_1 > n_2) {
+  console.log("n_1 is greater " + n_1);
 } else {
-    console.log(`Wow, you both have equally long names, ${len1} characters.<br>`);
+  console.log("n_2 is greater " + n_2);
 }
 
 // 2.2. Check if the string contains vowels or not.
 // - If it contains vowels, print the number of name, and also print the vowel letters along with the vowel characters. or
 // - print no vowels
-let prograde1 = 'Shrikantkumar';
-if (prograde1.match(/[aeiouAEIOU]/)) {
-    console.log(prograde1 + " " + "has a Vowel in it");
-}
-else {
-    console.log(prograde1 + " " + "no vowels");
-}
+var x = "ProGrad";
+var count = 0;
+for (let i = 0; i < x.length; i++) {
+  if (
+    x[i] == "A" ||
+    x[i] == "E" ||
+    x[i] == "I" ||
+    x[i] == "O" ||
+    x[i] == "U" ||
+    x[i] == "a" ||
+    x[i] == "e" ||
+    (x[i] == "i") | (x[i] == "o") | (x[i] == "u")
+  ) {
+    console.log(x[i]);
+    count++;
+  }
 
+  if (count == 0) {
+    console.log("no vowel");
+  } else console.log(count);
+}
 
 // 2.3. Check if the string contains uppercase and lowercase characters Xx
 // - Print the number of upper case characters
-console.log(prograde1.toUpperCase(prograde1));
-
 // - Print the number of lower case characters
-console.log(prograde1.toUpperCase(prograde1));
 
+var x = "alPHAbet";
+var count_U = 0;
+var count_L = 0;
+for (let i = 0; i < x.length; i++) {
+  if (x[i] >= "a" && x[i] <= "z") {
+    count_L = count_L + 1;
+  } else {
+    count_U = count_U + 1;
+  }
+  console.log("lower case count :" + count_L);
+  console.log("upper case count :" + count_U);
+}
 
 // Progression 3: Control Statements - 2
 // 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "ProGrad"
-var str1 = "";
-for (let i = 0; i < len1; i++) {
-    str1 = str1 + " " + Prograd1.charAt(i);
+let char1 = "Prograd";
+var i = 0;
+while (char1[i] != 0) {
+  console.log(char1[i] + " ");
+  i++;
 }
-console.log(str1.toUpperCase());
-document.write(`Drivers name in capital: ${str1.toUpperCase()} <br>`)
-
 // 3.2 Print all the characters of the navigator's name, in reverse order. i.e. "darGorP"
-let str1 = "prograde";
-str1.split();
-str1.split(" ").reverse();
-str1.split(" ").reverse().join("");
+let char2 = "Shrikant";
+
+for (let i = char2.length; i => 1; i++) {
+  console.log(char2[i] + " ");
+}
 
 // 3.3 Merge both the characters such that driver is followed by Navigator like "ProGrad FACEPrep"
-prograde1.concat(prograde2);
 // - Now bring the FACEPrep to the start and send ProGrad to the back like "FACEPrep ProGrad"
-prograde2.concat(prograde1);
+console.log(char1 + " " + char2);
+console.log(char2 + " " + char1);
+
 // 3.3 Depending on the lexicographic order of the strings, print:
 // - The driver's name goes first.
-
 // - Yo, the navigator goes first definitely.
-
 // - What?! You both have the same name?
-if (Prograd1.charCodeAt(0) < Prograd2.charCodeAt(0)) {
-    console.log("The drivers name goes first.");
-    document.write("The driver's name goes first.<br>");
-} else if (Prograd1.charCodeAt(0) > Prograd2.charCodeAt(0)) {
-    console.log("Yo, the navigator goes first definitely.");
-    document.write("Yo, the navigator goes first definitely.<br>");
-} else {
-    console.log("What? ! You both have the same name ?");
-    document.write("What? ! You both have the same name ? <br>");
-}
-
+if (char1.localcompare(char2) == -1 || char1.localeCompare(char2) == -2)
+  console.log(`${char1} come first`);
+else if (char1.localcompare(char2) == 1 || char1.localeCompare(char2) == 2)
+  console.log(`${char2} come first`);
+else console.log("what ?! you both have the same name");
 
 // Bonus Time!
 // Bonus 1:
