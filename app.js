@@ -1,56 +1,108 @@
-// Important Note - No Built-in functions to be used
-// Progression 1: Names and Input
+//Driver and Navigator name
+var ProGrad_1 = 'Veera';
+print(ProGrad_1);
+var ProGrad_2 = 'Naveen';
+print(ProGrad_2);
 
-// 1.1 Create a variable `ProGrad-1` with the driver's name.
-// 1.2 Print `"The driver's name is XXXX"`.
-// 1.3 Create a variable `ProGrad-2` with the navigator's name.
-// 1.4 Print `"The navigator's name is YYYY"`.
+//Printing largest name
+if ( getcount(ProGrad_1) > getcount(ProGrad_2)){
+    print("The driver has the longest name, it has" + getcount(ProGrad_1) + "characters")
+}
+else if ( getcount(ProGrad_1) < getcount(ProGrad_2)){
+    print("The Navigator has the longest name, it has" + getcount(ProGrad_2) + "characters")
+}
+else{
+    print("Wow, you both have equally long names,"+ getcount(ProGrad_1) +"characters!")
+}
 
-// Progression 2: Control Statements - 1
-// 2.1. Depending on which name is longer, print:
-// - The driver has the longest name, it has XX characters. or
-// - It seems that the navigator has the longest name, it has XX characters. or
-// - Wow, you both have equally long names, XX characters!.
+// Finding vowels
+var Vcount = 0;
+while (ProGrad_1[Vcount] !== undefined){
+    if(ProGrad_1[Vcount] === "a" || ProGrad_1[Vcount] === "e" || ProGrad_1[Vcount] === "i" || ProGrad_1[Vcount] === "o" || ProGrad_1[Vcount] === "u" || ProGrad_1[Vcount] === "A" || ProGrad_1[Vcount] === "E" || ProGrad_1[Vcount] === "I" || ProGrad_1[Vcount] === "O" || ProGrad_1[Vcount] === "U" ){
+        print(ProGrad_1[Vcount]+ " " + Vcount + " " );
+    }
+    else{
+        print("print no vowels")
+    }
+    Vcount++;
+}
+var Vwcount = 0;
+while (ProGrad_2[Vwcount] !== undefined){
+    if(ProGrad_2[Vwcount] === "a" || ProGrad_2[Vwcount] === "e" || ProGrad_2[Vwcount] === "i" || ProGrad_2[Vwcount] === "o" || ProGrad_2[Vwcount] === "u" || ProGrad_2[Vwcount] === "A" || ProGrad_2[Vwcount] === "E" || ProGrad_2[Vwcount] === "I" || ProGrad_2[Vwcount] === "O" || ProGrad_2[Vwcount] === "U"){
+        print(ProGrad_2[Vwcount]+ " " + Vcount + " " );
+    }
+    else{
+        print("print no vowels")
+    }
+    Vwcount++;
+}
 
-// 2.2. Check if the string contains vowels or not.
-// - If it contains vowels, print the name, and also print the vowel letters along with the vowel index. or
-// - print no vowels
-// - for example. In String ProGrad - o and a are vowels. Print ProGrad o a 2 5. 
+//Upper and lower count
+var driverlowercount = getlowercount(ProGrad_1);
+var navigatorlowercount = getlowercount(ProGrad_2);
 
-// 2.3. Check if the string contains uppercase and lowercase characters Xx
-// - Print the number of upper case characters
-// - Print the number of lower case characters
+var driveruppercount = getuppercount(ProGrad_1);
+var navigatoruppercount = getuppercount(ProGrad_2);
+
+print("No of Upper and lower case in Driver" + driveruppercount + " " + driverlowercount);
+print("No of Upper and lower case in navigator" + navigatoruppercount + " " + navigatorlowercount);
+
+// print name including space and reverse
+getname(ProGrad_1);
+getrevname(ProGrad_2,getcount(ProGrad_2));
+
+//Merger and reverse
+var merge_name = ProGrad_1+ " " + ProGrad_2;
+print(merge_name);
+
+var rev_merge_name = ProGrad_2+ " " + ProGrad_1;
+print(rev_merge_name);
+
+if(ProGrad_1 === ProGrad_2){
+    print("You both have the same name");
+}
 
 
-// Progression 3: Control Statements - 2
-// 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "ProGrad"
 
-// 3.2 Print all the characters of the navigator's name, in reverse order. i.e. "darGorP"
+//Functions
 
-// 3.3 Merge both the characters such that driver is followed by Navigator like "ProGrad FACEPrep"
-// - Now bring the FACEPrep to the start and send ProGrad to the back like "FACEPrep ProGrad"
+//Finding Length function
+function getcount(s){
+    var length = 0;
+    while (s[length] !== undefined)
+      length++;
+    return length;
+}
 
-// 3.3 Depending on the lexicographic order of the strings, print:
-// - The driver's name goes first.
-// - Yo, the navigator goes first definitely.
-// - What?! You both have the same name?
+//Finding lowercount function
+function getlowercount(name){
+    var length = 0;
+    var count = 0;
+    while (name[length] !== undefined){
+        if(name[length]>= 'a' && name[length]<= 'z')
+            count++;
+        length++;
+    }
+    return count;
+}
 
-// Bonus Time!
-// Bonus 1:
-// Go to lorem ipsum generator and:
-// Generate 3 paragraphs. Store the text in a variable type of string.
-// Make your program count the number of words in the string.
-// Make your program count the number of times the Latin word et appears.
-// Bonus 2:
-// Create a new variable phraseToCheck and have it contain some string value. Write a code that will check if the value we assigned to this variable is a Palindrome. Here are some examples of palindromes:
+//Finding uppercount function
+function getuppercount(name){
+    var length = 0;
+    var count = 0;
+    while (name[length] !== undefined){
+        if(name[length]>= 'A' && name[length]<= 'Z')
+            count++;
+        length++;
+    }
+    return count;
+}
 
-// "A man, a plan, a canal, Panama!"
-// "Amor, Roma"
-// "race car"
-// "stack cats"
-// "step on no pets"
-// "taco cat"
-// "put it up"
-// "Was it a car or a cat I saw?" and "No 'x' in Nixon".
+//print rev_name
 
-// Hint: If you use Google to help you to find solution to this iteration, you might run into some solutions that use advanced string or array methods (such as join(), reverse(), etc.). However, try to apply the knowledge you currently have since you can build pretty nice solution with just using for loop, if-else statements with some break and continue... Just sayin' 
+function getrevname(name,length){
+    while (name[length] != undefined){
+        print (name[length]);
+        length++;
+    }
+}
