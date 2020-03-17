@@ -32,19 +32,43 @@ else {
 // - If it contains vowels, print the name, and also print the vowel letters along with the vowel index. or
 // - print no vowels
 // - for example. In String ProGrad - o and a are vowels. Print ProGrad o a 2 5. 
-var vowels = "aeiouAEIOU";
 var str1 = ProGrad_1.slice(0);
 var str2 = ProGrad_2.slice(0);
 
-for (i = 0; i < vowels.length; i++) {
-
+function vowel_name(str) {
+    for (let i = 0; i < str.length; i++) {
+        if (str.charAt(i) == "a" || str.charAt(i) == "e" || str.charAt(i) == "i" || str.charAt(i) == "o" || str.charAt(i) == "u" || str.charAt(i) == "A" || str.charAt(i) == "E" || str.charAt(i) == "I" || str.charAt(i) == "O" || str.charAt(i) == "U"); {
+            console.log(str.charAt(i));
+        }
+    }
 }
+vowel_name(ProGrad_1);
 
 // 2.3. Check if the string contains uppercase and lowercase characters Xx
 // - Print the number of upper case characters
 // - Print the number of lower case characters
+function Case(str) {
+    let uppercase = 0;
+    let lowercase = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        if(str.charAt(i) == str.charAt(i).toUpperCase()) {
+            uppercase++;
+            console.log("Uppercase:" + uppercase);
+        }
+    }
+    for (let j = 0,lowercase=0; j < str.length; j++){
+        if (str.charAt(j) == str.charAt(j).toLowerCase()) {
+            lowercase++;
+        }
+        console.log("Lowercase:" + lowercase);
+
+    }
 
 
+}
+
+Case(ProGrad_2);
 // Progression 3: Control Statements - 2
 // 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "ProGrad"
 
