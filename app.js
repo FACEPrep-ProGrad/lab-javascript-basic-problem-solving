@@ -22,40 +22,65 @@ let d, n;
 d = ProGrad_1.length;
 n = ProGrad_2.length;
 if (d > n) {
-    document.write("<br>");
-    document.write("The driver has the longest name, it has " + d + "characters");
+  document.write("<br>");
+  document.write("The driver has the longest name, it has " + d + "characters");
 } else if (d < n) {
-    document.write("<br>");
-    document.write("The navigator has the longest name, it has " + n + " characters");
-
+  document.write("<br>");
+  document.write(
+    "The navigator has the longest name, it has " + n + " characters"
+  );
 } else {
-    document.write("<br>");
-    document.write("Wow, you both have equally long names, " + n + "characters!");
+  document.write("<br>");
+  document.write("Wow, you both have equally long names, " + n + "characters!");
 }
 
 // 2.2. Check if the string contains vowels or not.
 // - If it contains vowels, print the name, and also print the vowel letters along with the vowel index. or
 // - print no vowels
-// - for example. In String ProGrad - o and a are vowels. Print ProGrad o a 2 5. 
+// - for example. In String ProGrad - o and a are vowels. Print ProGrad o a 2 5.
 
 var a = "ProGrad";
 var i;
 if (a.match(/[aeiouAEIOU]/)) {
-    document.write("<br>");
-    document.write(a + "&nbsp;");
-    b = a.length;
-    for (i = 0; i < b; i++) {
-        if (a.charAt(i) == 'a' || a.charAt(i) == 'e' || a.charAt(i) == 'i' || a.charAt(i) == 'o' || a.charAt(i) == 'u' || a.charAt(i) == 'A' || a.charAt(i) == 'E' || a.charAt(i) == 'I' || a.charAt(i) == 'O' || a.charAt(i) == 'U') {
-            document.write(a.charAt(i) + "&nbsp;");
-        }
+  document.write("<br>");
+  document.write(a + "&nbsp;");
+  b = a.length;
+  for (i = 0; i < b; i++) {
+    if (
+      a.charAt(i) == "a" ||
+      a.charAt(i) == "e" ||
+      a.charAt(i) == "i" ||
+      a.charAt(i) == "o" ||
+      a.charAt(i) == "u" ||
+      a.charAt(i) == "A" ||
+      a.charAt(i) == "E" ||
+      a.charAt(i) == "I" ||
+      a.charAt(i) == "O" ||
+      a.charAt(i) == "U"
+    ) {
+      document.write(a.charAt(i) + "&nbsp;");
     }
+  }
+  for (i = 0; i < b; i++) {
+    if (
+      a.charAt(i) == "a" ||
+      a.charAt(i) == "e" ||
+      a.charAt(i) == "i" ||
+      a.charAt(i) == "o" ||
+      a.charAt(i) == "u" ||
+      a.charAt(i) == "A" ||
+      a.charAt(i) == "E" ||
+      a.charAt(i) == "I" ||
+      a.charAt(i) == "O" ||
+      a.charAt(i) == "U"
+    ) {
+      document.write(i + "&nbsp;");
+    }
+  }
 } else {
-    document.write("<br>");
-    document.write("no vowels");
+  document.write("<br>");
+  document.write("no vowels");
 }
-
-
-
 
 // 2.3. Check if the string contains uppercase and lowercase characters Xx
 // - Print the number of upper case characters
@@ -63,37 +88,24 @@ if (a.match(/[aeiouAEIOU]/)) {
 var count = 0;
 var countlow = 0;
 
-if ((a >= 'A' && a <= 'Z') || (a >= 'a' && a <= 'z')) {
-    document.write("<br>");
-    document.write("string contains uppercase and lowercase characters");
+if ((a >= "A" && a <= "Z") || (a >= "a" && a <= "z")) {
+  document.write("<br>");
+  document.write("string contains uppercase and lowercase characters");
 } else {
-    document.write("<br>");
-    document.write("string does not contains uppercase and lowercase characters");
+  document.write("<br>");
+  document.write("string does not contains uppercase and lowercase characters");
 }
 
 for (i = 0; i < b; i++) {
-    if (a.charAt(i) >= 'A' && a.charAt(i) <= 'Z')
-        count++;
+  if (a.charAt(i) >= "A" && a.charAt(i) <= "Z") count++;
 }
 document.write("<br>");
 document.write("the number of uppercase characters are " + count);
 for (i = 0; i < b; i++) {
-    if (a.charAt(i) >= 'a' && a.charAt(i) <= 'z')
-        countlow++;
+  if (a.charAt(i) >= "a" && a.charAt(i) <= "z") countlow++;
 }
 document.write("<br>");
 document.write("the number of lowercase characters are " + countlow);
-
-
-
-
-
-
-
-
-
-
-
 
 // Progression 3: Control Statements - 2
 // 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "ProGrad"
@@ -126,4 +138,4 @@ document.write("the number of lowercase characters are " + countlow);
 // "put it up"
 // "Was it a car or a cat I saw?" and "No 'x' in Nixon".
 
-// Hint: If you use Google to help you to find solution to this iteration, you might run into some solutions that use advanced string or array methods (such as join(), reverse(), etc.). However, try to apply the knowledge you currently have since you can build pretty nice solution with just using for loop, if-else statements with some break and continue... Just sayin' 
+// Hint: If you use Google to help you to find solution to this iteration, you might run into some solutions that use advanced string or array methods (such as join(), reverse(), etc.). However, try to apply the knowledge you currently have since you can build pretty nice solution with just using for loop, if-else statements with some break and continue... Just sayin'
