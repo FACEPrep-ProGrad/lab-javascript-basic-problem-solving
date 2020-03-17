@@ -52,12 +52,12 @@ function Case(str) {
     let lowercase = 0;
 
     for (let i = 0; i < str.length; i++) {
-        if(str.charAt(i) == str.charAt(i).toUpperCase()) {
+        if (str.charAt(i) == str.charAt(i).toUpperCase()) {
             uppercase++;
             console.log("Uppercase:" + uppercase);
         }
     }
-    for (let j = 0,lowercase=0; j < str.length; j++){
+    for (let j = 0, lowercase = 0; j < str.length; j++) {
         if (str.charAt(j) == str.charAt(j).toLowerCase()) {
             lowercase++;
         }
