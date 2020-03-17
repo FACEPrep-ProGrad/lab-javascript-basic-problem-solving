@@ -6,16 +6,39 @@
 // 1.3 Create a variable `ProGrad-2` with the navigator's name.
 // 1.4 Print `"The navigator's name is YYYY"`.
 
+let ProGrad_1 = "Vin";
+let ProGrad_2 = "Diesel";
+console.log("The driver's name is" + " " + ProGrad_1);
+console.log("The navigator's name is" + " " + ProGrad_2);
+
 // Progression 2: Control Statements - 1
 // 2.1. Depending on which name is longer, print:
 // - The driver has the longest name, it has XX characters. or
 // - It seems that the navigator has the longest name, it has XX characters. or
 // - Wow, you both have equally long names, XX characters!.
 
+var len1 = ProGrad_1.length;
+var len2 = ProGrad_2.length;
+if (len1 > len2) {
+    console.log("The driver has the longest name, it has" + " " + len1 + " " + "characters.");
+}
+else if (len2 > len1) {
+    console.log("It seems that the navigator has the longest name, it has" + " " + len2 + " " + "characters.");
+}
+else {
+    console.log("Wow, you both have equally long names," + " " + len1 + " " + "characters!");
+}
 // 2.2. Check if the string contains vowels or not.
 // - If it contains vowels, print the name, and also print the vowel letters along with the vowel index. or
 // - print no vowels
 // - for example. In String ProGrad - o and a are vowels. Print ProGrad o a 2 5. 
+var vowels = "aeiouAEIOU";
+var str1 = ProGrad_1.slice(0);
+var str2 = ProGrad_2.slice(0);
+
+for (i = 0; i < vowels.length; i++) {
+
+}
 
 // 2.3. Check if the string contains uppercase and lowercase characters Xx
 // - Print the number of upper case characters
