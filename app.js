@@ -36,13 +36,16 @@ var str1 = ProGrad_1.slice(0);
 var str2 = ProGrad_2.slice(0);
 
 function vowel_name(str) {
+
     for (let i = 0; i < str.length; i++) {
         if (str.charAt(i) == "a" || str.charAt(i) == "e" || str.charAt(i) == "i" || str.charAt(i) == "o" || str.charAt(i) == "u" || str.charAt(i) == "A" || str.charAt(i) == "E" || str.charAt(i) == "I" || str.charAt(i) == "O" || str.charAt(i) == "U"); {
             console.log(str.charAt(i));
         }
+
     }
 }
 vowel_name(ProGrad_1);
+vowel_name(ProGrad_2);
 
 // 2.3. Check if the string contains uppercase and lowercase characters Xx
 // - Print the number of upper case characters
@@ -72,10 +75,21 @@ Case(ProGrad_2);
 // Progression 3: Control Statements - 2
 // 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "ProGrad"
 
+for (let i = 0; i < ProGrad_1.length; i++) {
+    document.write(ProGrad_1.charAt(i) + " ");
+}
+
 // 3.2 Print all the characters of the navigator's name, in reverse order. i.e. "darGorP"
+
+for (i = (ProGrad_2.length - 1); i >= 0; i--) {
+    document.write(ProGrad_2.charAt(i) + " ");
+}
 
 // 3.3 Merge both the characters such that driver is followed by Navigator like "ProGrad FACEPrep"
 // - Now bring the FACEPrep to the start and send ProGrad to the back like "FACEPrep ProGrad"
+
+console.log(ProGrad_1 + " " + ProGrad_2);
+console.log(ProGrad_2 + " " + ProGrad_1);
 
 // 3.3 Depending on the lexicographic order of the strings, print:
 // - The driver's name goes first.
@@ -88,6 +102,10 @@ Case(ProGrad_2);
 // Generate 3 paragraphs. Store the text in a variable type of string.
 // Make your program count the number of words in the string.
 // Make your program count the number of times the Latin word et appears.
+
+
+
+
 // Bonus 2:
 // Create a new variable phraseToCheck and have it contain some string value. Write a code that will check if the value we assigned to this variable is a Palindrome. Here are some examples of palindromes:
 
