@@ -11,7 +11,19 @@
 // - The driver has the longest name, it has XX characters. or
 // - It seems that the navigator has the longest name, it has XX characters. or
 // - Wow, you both have equally long names, XX characters!.
-
+let ProGrad_1 = " Pavan Ganesh";
+console.log("The Driver's name is " + ProGrad_1);
+let ProGrad_2 = " Varsha Bisht";
+console.log("The navigator's name is " + ProGrad_2);
+let driver = ProGrad_1.length;
+navigator = ProGrad_2.length;
+if (driver > navigator) {
+    console.log(" The driver has the longest name, it has " + driver + " characters.");
+} else if (driver < navigator) {
+    console.log("It seems that the navigator has the longest name, it has " + navigator + " characters");
+} else {
+    console.log("Wow, you both have equally long names, " + driver + " characters!.");
+}
 // 2.2. Check if the string contains vowels or not.
 // - If it contains vowels, print the name, and also print the vowel letters along with the vowel index. or
 // - print no vowels
