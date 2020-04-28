@@ -24,11 +24,35 @@ if (driver > navigator) {
 } else {
     console.log("Wow, you both have equally long names, " + driver + " characters!.");
 }
+
+
+
+let count = 0;
+let vowel = "aeiou";
+for (let x = 0; x < ProGrad_2.length; x++) {
+    if (vowel.indexOf(ProGrad_2[x]) !== -1) {
+        count++;
+    }
+}
+console.log(ProGrad_2 + " no. of vowels " + count);
 // 2.2. Check if the string contains vowels or not.
 // - If it contains vowels, print the name, and also print the vowel letters along with the vowel index. or
 // - print no vowels
 // - for example. In String ProGrad - o and a are vowels. Print ProGrad o a 2 5. 
+let upper = 0;
+let lower = 0;
+for (var i = 0; i < ProGrad_2.length; i++) {
+    if (/[A-Z]/.test(ProGrad_2.charAt(i))) {
+        upper++;
+    } else {
+        lower++;
+    }
+}
+console.log("no of lower case " + lower);;
+console.log("no of upper case " + upper);
 
+let str = ProGrad_1.split("");
+console.log("after removing space" + str);
 // 2.3. Check if the string contains uppercase and lowercase characters Xx
 // - Print the number of upper case characters
 // - Print the number of lower case characters
@@ -38,14 +62,29 @@ if (driver > navigator) {
 // 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "ProGrad"
 
 // 3.2 Print all the characters of the navigator's name, in reverse order. i.e. "darGorP"
-
+var newString = "";
+for (var i = ProGrad_2.length - 1; i >= 0; i--) {
+    newString += str[i];
+}
+document.write(newString);
 // 3.3 Merge both the characters such that driver is followed by Navigator like "ProGrad FACEPrep"
 // - Now bring the FACEPrep to the start and send ProGrad to the back like "FACEPrep ProGrad"
-
+var mergeString = ProGrad_1.concat(ProGrad_2);
+document.write(mergeString);
 // 3.3 Depending on the lexicographic order of the strings, print:
 // - The driver's name goes first.
 // - Yo, the navigator goes first definitely.
 // - What?! You both have the same name?
+var mergeString1 = ProGrad_2.concat(ProGrad_1);
+document.write(mergeString1 + "\n ");
+
+
+if (ProGrad_1.localeCompare(ProGrad_2) == -1)
+    document.write("driver name goes first");
+else if (ProGrad_1.localeCompare(ProGrad_2) == 1)
+    document.write("navigator should come first")
+else
+    document.write("both have same name");
 
 // Bonus Time!
 // Bonus 1:

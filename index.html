@@ -19,7 +19,54 @@
         } else {
             console.log("Wow, you both have equally long names, " + driver + " characters!.");
         }
+
+        let count = 0;
+        let vowel = "aeiou";
+        for (let x = 0; x < ProGrad_2.length; x++) {
+            if (vowel.indexOf(ProGrad_2[x]) !== -1) {
+                count++;
+            }
+        }
+        console.log(ProGrad_2 + " no. of vowels " + count);
+
+        let upper = 0;
+        let lower = 0;
+        for (var i = 0; i < ProGrad_2.length; i++) {
+            if (/[A-Z]/.test(ProGrad_2.charAt(i))) {
+                upper++;
+            } else {
+                lower++;
+            }
+        }
+        console.log("no of lower case " + lower);;
+        console.log("no of upper case " + upper);
+
+        let str = ProGrad_1.split("");
+        console.log("after removing space" + str);
+
+
+        var newString = "";
+        for (var i = ProGrad_2.length - 1; i >= 0; i--) {
+            newString += str[i];
+        }
+        document.write(newString);
+
+
+        var mergeString = ProGrad_1.concat(ProGrad_2);
+        document.write(mergeString + "\n ");
+
+        var mergeString1 = ProGrad_2.concat(ProGrad_1);
+        document.write(mergeString1 + "\n ");
+
+        if (ProGrad_1.localeCompare(ProGrad_2) == -1)
+            document.write("driver name goes first");
+        else if (ProGrad_1.localeCompare(ProGrad_2) == 1)
+            document.write("navigator should come first")
+        else
+            document.write("both have same name");
     </script>
+
+
 </head>
 
 <body>
