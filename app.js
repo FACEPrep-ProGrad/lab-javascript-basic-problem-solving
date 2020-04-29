@@ -25,7 +25,7 @@ else if(Prograd_1.lenghth<Prograd_2.length)
 }
 else
 {
-    console.log("" Wow, you both have equally long names,""+Prograd_2+"characters!");
+    console.log(" Wow, you both have equally long names,"+Prograd_2+"characters!");
 }
 // 2.2. Check if the string contains vowels or not.
 // - If it contains vowels, print the name, and also print the vowel letters along with the vowel index. or
