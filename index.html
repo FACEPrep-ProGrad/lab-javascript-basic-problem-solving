@@ -1,76 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loopy loobs</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<script>,initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        let ProGrad_1 = " Pavan Ganesh";
-        console.log("The Driver's name is " + ProGrad_1);
-        let ProGrad_2 = " Varsha Bisht";
-        console.log("The navigator's name is " + ProGrad_2);
-        let driver = ProGrad_1.length;
-        navigator = ProGrad_2.length;
-        if (driver > navigator) {
-            console.log(" The driver has the longest name, it has " + driver + " characters.");
-        } else if (driver < navigator) {
-            console.log("It seems that the navigator has the longest name, it has " + navigator + " characters");
-        } else {
-            console.log("Wow, you both have equally long names, " + driver + " characters!.");
-        }
-
-        let count = 0;
-        let vowel = "aeiou";
-        for (let x = 0; x < ProGrad_2.length; x++) {
-            if (vowel.indexOf(ProGrad_2[x]) !== -1) {
-                count++;
-            }
-        }
-        console.log(ProGrad_2 + " no. of vowels " + count);
-
-        let upper = 0;
-        let lower = 0;
-        for (var i = 0; i < ProGrad_2.length; i++) {
-            if (/[A-Z]/.test(ProGrad_2.charAt(i))) {
-                upper++;
-            } else {
-                lower++;
-            }
-        }
-        console.log("no of lower case " + lower);;
-        console.log("no of upper case " + upper);
-
-        let str = ProGrad_1.split("");
-        console.log("after removing space" + str);
-
-
-        var newString = "";
-        for (var i = ProGrad_2.length - 1; i >= 0; i--) {
-            newString += str[i];
-        }
-        document.write(newString);
-
-
-        var mergeString = ProGrad_1.concat(ProGrad_2);
-        document.write(mergeString + "\n ");
-
-        var mergeString1 = ProGrad_2.concat(ProGrad_1);
-        document.write(mergeString1 + "\n ");
-
-        if (ProGrad_1.localeCompare(ProGrad_2) == -1)
-            document.write("driver name goes first");
-        else if (ProGrad_1.localeCompare(ProGrad_2) == 1)
-            document.write("navigator should come first")
-        else
-            document.write("both have same name");
-    </script>
-
-
-</head>
-
-<body>
-
-</body>
-
+    <script src="app.js" type="module"></script>
+  </head>
+  <body></body>
 </html>
