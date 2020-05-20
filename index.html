@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB1</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+// Progression 1: Names and Input
+
+// 1.1 Create a variable `ProGrad-1` with the driver's name.
+// 1.2 Print `"The driver's name is XXXX"`.
+// 1.3 Create a variable `ProGrad-2` with the navigator's name.
+// 1.4 Print `"The navigator's name is YYYY"`.
+
+    var proGrad_1 = "swati";
+    console.log(proGrad_1);
+
+    var proGrad_2 = "saxena";
+    console.log(proGrad_2)
+
+    // Progression 2: Control Statements - 1
+// 2.1. Depending on which name is longer, print:
+// - The driver has the longest name, it has XX characters. or
+// - It seems that the navigator has the longest name, it has XX characters. or
+// - Wow, you both have equally long names, XX characters!.
+
+    /*===========for only length==================
+    function findLongestWord(str) {
+        var strSplit = str.split(' ');
+        var longestWord = 0;
+        for (var i = 0; i < strSplit.length; i++) {
+            if (strSplit[i].length > longestWord) {
+                longestWord = strSplit[i].length;
+            }
+        }
+        return longestWord;
+    }
+
+    console.log(findLongestWord("swati"));
+    console.log(findLongestWord("saxena"));
+    
+    ===============================================*/
+
+    function len(str) {
+        var length = 0;
+        while (str[length] !== undefined)
+            length++;
+        return length;
+    }
+
+    var len1 = len(proGrad_1);
+    var len2 = len(proGrad_2);
+    if (len1 > len2) {
+        console.log("the driver " + proGrad_1 + " has the longest name " + len1 + "  characters");
+    }
+    else if (len1 < len2) {
+        console.log("the Navigator " + proGrad_2 + " has the longest name " + len2 + "  characters");
+    }
+    else {
+        console.log("both driver and navigater " + proGrad_2, proGrad_1 + " has same length" + len1);
+    }
+
+ // 2.2. Check if the string contains vowels or not.
+
+
+    function vowel_count(str) {
+        var vowel_list = 'aeiouAEIOU';
+        var count = 0;
+
+        for (var x = 0; x < str.length; x++) {
+            if (vowel_list.indexOf(str[x]) !== -1) {
+                count += 1;
+            }
+
+        }
+        return count;
+    }
+
+    console.log(vowel_count("swati"));
+    console.log(vowel_count("saxena"));
+
+   // 2.3. Check if the string contains uppercase and lowercase characters Xx
+// - Print the number of upper case characters
+// - Print the number of lower case characters
+
+
+    var upper = 0;
+    var lower = 0;
+    function count(str) {
+        for (var i = 0; i < str.length; i++) {
+            if (str[i] >= 'A' && str[i] <= 'Z')
+                upper++;
+            else if (str[i] >= 'a' && str[i] <= 'z')
+                lower++;
+        }
+        console.log("upper case characters in " + str + ":" + upper);
+        console.log("lower case characters in " + str + ":" + lower);
+    }
+
+    count(proGrad_1);
+    count("sAXEna");
+
+
+  // Progression 3: Control Statements - 2
+// 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "ProGrad"
+
+
+    // space and capital
+    proGrad_1 = proGrad_1.toUpperCase();
+    for (i = 0; i < len1; i++) {
+        console.log(proGrad_1[i] + " ");
+    }
+
+  // 3.2 Print all the characters of the navigator's name, in reverse order. i.e. "darGorP"
+
+
+    function reverseString(s) {
+        var string = "";
+        for (var i = s.length - 1; i >= 0; i--) {
+            string += s[i];
+        }
+        return string;
+    }
+    console.log(reverseString('saxena'));
+
+    //    concatenation 
+
+    console.log(proGrad_1 + " " + proGrad_2);
+
+
+
+
+    //  lexicographic
+    if (proGrad_1[0] < proGrad_2[0]) {
+        console.log("Lexicographic\n" + proGrad_1);
+    }
+    else {
+        console.log("Lexicographic\n" + proGrad_2);
+    }
+</script>
+
+</html>
