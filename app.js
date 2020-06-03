@@ -137,7 +137,7 @@ for(let i=0;i<text.length;i++){
 if(text.length){
     count++;
 }
-document.write(count);
+document.write(`Words in string ${count}`);
 
 // Make your program count the number of times the Latin word et appears.
 
