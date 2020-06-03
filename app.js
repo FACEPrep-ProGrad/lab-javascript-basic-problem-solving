@@ -144,6 +144,23 @@ document.write(`Words in string ${count}`);
 // Bonus 2:
 // Create a new variable phraseToCheck and have it contain some string value. Write a code that will check if the value we assigned to this variable is a Palindrome. Here are some examples of palindromes:
 let phraseToCheck = "A man, a plan, a canal, Panama!";
+let reversed = `` ,original = ``;
+//first convert to lower/upper case
+original = phraseToCheck;
+phraseToCheck = phraseToCheck.toLowerCase();
+//remove spaces using regular expressions
+phraseToCheck =  phraseToCheck.replace(/ /g, ""); 
+//debugging console.log(`${phraseToCheck}`);
+phraseToCheck =  phraseToCheck.replace(/\'|\,|\!|\?|\"/g, "");
+//debugging console.log(`${phraseToCheck}`);
+
+for(let i= phraseToCheck.length - 1 ; i > -1 ; i-- ){
+    reversed += phraseToCheck[i];
+}
+//debugging console.log(`${reversed}`);
+if(phraseToCheck == reversed){
+    document.write(`<br>${original} is a palindrome`);
+}
 // "A man, a plan, a canal, Panama!"
 // "Amor, Roma"
 // "race car"
