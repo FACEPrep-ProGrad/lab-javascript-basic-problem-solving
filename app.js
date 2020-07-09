@@ -4,11 +4,11 @@
 // 1.1 Create a variable `ProGrad-1` with the driver's name.
 var proGrad_1 = "Shivhari";
 // 1.2 Print `"The driver's name is XXXX"`.
-console.log("The driver's name is " + ProGrad1);
+console.log("The driver's name is " + ProGrad_1);
 // 1.3 Create a variable `ProGrad-2` with the navigator's name.
 var proGrad_2 = "Linan";
 // 1.4 Print `"The navigator's name is YYYY"`.
-console.log("The navigator's name is " + ProGrad2);
+console.log("The navigator's name is " + ProGrad_2);
 
 // Progression 2: Control Statements - 1
 // 2.1. Depending on which name is longer, print:
