@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Lab1</title>
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <script>
+        var proGrad_1 = "Shivhari";
+        console.log("The driver's name is " + ProGrad_1);
+
+        var proGrad_2 = "Linan";
+        console.log("The navigator's name is " + ProGrad_2);
+
+
+        function len(str) {
+            var length = 0;
+            while (str[length] !== undefined)
+                length++;
+            return length;
+        }
+
+        var len1 = len(proGrad_1);
+        var len2 = len(proGrad_2);
+        if (len1 > len2) {
+            console.log("The driver " + proGrad_1 + " has the longest name " + len1 + "  characters");
+        } else if (len1 < len2) {
+            console.log("The Navigator " + proGrad_2 + " has the longest name " + len2 + "  characters");
+        } else {
+            console.log("both driver and navigater " + proGrad_2, proGrad_1 + " has same length" + len1);
+        }
+
+        function vowel_count(str) {
+            var vowel_list = 'aeiouAEIOU';
+            var count = 0;
+
+            for (var x = 0; x < str.length; x++) {
+                if (vowel_list.indexOf(str[x]) !== -1) {
+                    count++;
+                }
+
+            }
+            return count;
+        }
+
+        console.log(vowel_count("Shivhari"));
+        console.log(vowel_count("Linan"));
+
+
+
+        function count(str) {
+            var upper = 0;
+            var lower = 0;
+
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] >= 'A' && str[i] <= 'Z')
+                    upper++;
+                else if (str[i] >= 'a' && str[i] <= 'z')
+                    lower++;
+            }
+            console.log("upper case characters in " + str + ":" + upper);
+            console.log("lower case characters in " + str + ":" + lower);
+        }
+
+        count(proGrad_2);
+        count("Linan");
+
+
+        proGrad_1 = proGrad_1.toUpperCase();
+        var len1;
+        for (i = 0; i < len1; i++) {
+            console.log(proGrad_1[i] + " ");
+        }
+
+        function reverseString(str) {
+            var string = "";
+            for (var i = str.length - 1; i >= 0; i--) {
+                string += str[i];
+            }
+            return string;
+        }
+
+        console.log(reverseString(proGrad_2));
+
+        console.log(proGrad_1 + " " + proGrad_2);
+
+        if (proGrad_1 < proGrad_2) {
+            console.log('proGrad_1 goes first');
+        } else if (proGrad_1 > proGrad_2) {
+            console.log('proGrad_2 goes first');
+        } else {
+            console.log('You have same names');
+        }
+    </script>
+</body>
+
+</html>
