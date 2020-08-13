@@ -6,27 +6,76 @@
 // 1.3 Create a variable `ProGrad-2` with the navigator's name.
 // 1.4 Print `"The navigator's name is YYYY"`.
 
+var mahesh = "ProGrad-1";
+console.log("The driver's name is " + mahesh);
+var silentcoder = "ProGrad-2";
+console.log("The navigator's is " + silentcoder);
 // Progression 2: Control Statements - 1
 // 2.1. Depending on which name is longer, print:
 // - The driver has the longest name, it has XX characters. or
 // - It seems that the navigator has the longest name, it has XX characters. or
 // - Wow, you both have equally long names, XX characters!.
 
+if (mahesh.length == silentcoder.length) {
+    console.log("Wow, you both have equally long names, " + mahesh.length + " characters!");
+} else if (mahesh.length > silentcoder.length) {
+    console.log("The driver has the longest name, it has " + silentcoder.length + " characters");
+} else {
+    console.log("It seems that the navigator has the longest name, it has " + silentcoder.length + " characters.")
+}
+
 // 2.2. Check if the string contains vowels or not.
 // - If it contains vowels, print the name, and also print the vowel letters along with the vowel index. or
 // - print no vowels
 // - for example. In String ProGrad - o and a are vowels. Print ProGrad o a 2 5. 
 
+var string = "ProGrad";
+const vowels = ["a", "e", "i", "o", "u"];
+var v = "";
+var c = "";
+for (let letter of string.toLowerCase()) {
+    if (vowels.includes(letter)) {
+        v += letter + " ";
+        c+=string.indexOf(letter)+" ";
+    }
+}
+if (v.length > 0) {
+    console.log(string + " " + v + " " + c);
+} else {
+    console.log("no vowels");
+}
 // 2.3. Check if the string contains uppercase and lowercase characters Xx
 // - Print the number of upper case characters
 // - Print the number of lower case characters
 
+var string = "ProGrad Mahesh";
+var upperCounter = 0;
+var lowerCounter = 0;
+for (let letter of string) {
+    if (letter == letter.toUpperCase()) {
+        upperCounter++;
+    } else if (letter == letter.toLowerCase()) {
+        lowerCounter++;
+    }
+}
+
+console.log("Number of Upper case characters = "+upperCounter);
+console.log("Number of Lower case characters = "+lowerCounter);
 
 // Progression 3: Control Statements - 2
 // 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "ProGrad"
 
+var result = ""
+for (let letter of mahesh){
+    result += letter.toUpperCase() + " ";
+}
+console.log(result);
 // 3.2 Print all the characters of the navigator's name, in reverse order. i.e. "darGorP"
-
+var reverse="";
+for (var i = silentcoder.length - 1; i >= 0; i--){
+    reverse+=silentcoder[i]+" ";
+}
+console.log(reverse);
 // 3.3 Merge both the characters such that driver is followed by Navigator like "ProGrad FACEPrep"
 // - Now bring the FACEPrep to the start and send ProGrad to the back like "FACEPrep ProGrad"
 
@@ -34,7 +83,11 @@
 // - The driver's name goes first.
 // - Yo, the navigator goes first definitely.
 // - What?! You both have the same name?
-
+if (mahesh.localeCompare(silentcoder)){
+    console.log("The driver's name goes first.");
+}else{
+    
+}
 // Bonus Time!
 // Bonus 1:
 // Go to lorem ipsum generator and:
