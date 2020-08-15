@@ -33,10 +33,10 @@ var string = "ProGrad";
 const vowels = ["a", "e", "i", "o", "u"];
 var v = "";
 var c = "";
-for (let letter of string.toLowerCase()) {
-    if (vowels.includes(letter)) {
-        v += letter + " ";
-        c+=string.indexOf(letter)+" ";
+for (let i = 0; i < string.length; i++) {
+    if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
+        v += string[i] + " ";
+        c += i + " ";
     }
 }
 if (v.length > 0) {
@@ -59,21 +59,21 @@ for (let letter of string) {
     }
 }
 
-console.log("Number of Upper case characters = "+upperCounter);
-console.log("Number of Lower case characters = "+lowerCounter);
+console.log("Number of Upper case characters = " + upperCounter);
+console.log("Number of Lower case characters = " + lowerCounter);
 
 // Progression 3: Control Statements - 2
 // 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "ProGrad"
 
 var result = ""
-for (let letter of mahesh){
+for (let letter of mahesh) {
     result += letter.toUpperCase() + " ";
 }
 console.log(result);
 // 3.2 Print all the characters of the navigator's name, in reverse order. i.e. "darGorP"
-var reverse="";
-for (var i = silentcoder.length - 1; i >= 0; i--){
-    reverse+=silentcoder[i]+" ";
+var reverse = "";
+for (var i = silentcoder.length - 1; i >= 0; i--) {
+    reverse += silentcoder[i] + " ";
 }
 console.log(reverse);
 // 3.3 Merge both the characters such that driver is followed by Navigator like "ProGrad FACEPrep"
@@ -83,10 +83,12 @@ console.log(reverse);
 // - The driver's name goes first.
 // - Yo, the navigator goes first definitely.
 // - What?! You both have the same name?
-if (mahesh.localeCompare(silentcoder)){
+if (mahesh.localeCompare(silentcoder)) {
     console.log("The driver's name goes first.");
-}else{
-    
+} else if (silentcoder.localeCompare(mahesh)) {
+    console.log("Yo, the navigator goes first definitely.");
+} else {
+    console.log("What ? !You both have the same name ? ");
 }
 // Bonus Time!
 // Bonus 1:
@@ -94,7 +96,18 @@ if (mahesh.localeCompare(silentcoder)){
 // Generate 3 paragraphs. Store the text in a variable type of string.
 // Make your program count the number of words in the string.
 // Make your program count the number of times the Latin word et appears.
+
+var string = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Culpa, neque earum fugiat a sapiente laborum dicta id libero dignissimos eos commodi voluptate ullam, soluta suscipit velit accusantium voluptatum nemo voluptates Lorem ipsum dolor sit amet consectetur, adipisicing elit.Autem error temporibus ducimus dolor consectetur voluptates reprehenderit dicta facere sint tempore, laboriosam repudiandae necessitatibus asperiores maxime.Consequuntur iste dolorum reiciendis fuga Lorem ipsum dolor sit amet consectetur adipisicing elit.Rerum, perspiciatis delectus!Tempore dignissimos corporis tenetur aut necessitatibus.Laborum, quaerat.Est, similique dolorem cupiditate culpa quas vitae hic blanditiis praesentium odit!"
+var total = 0;
+for (let i = 0; i < string.length; i++) {
+    if (string[i] === " ") {
+        total += 1;
+    }
+}
+total += 1;
+console.log(total);
 // Bonus 2:
+
 // Create a new variable phraseToCheck and have it contain some string value. Write a code that will check if the value we assigned to this variable is a Palindrome. Here are some examples of palindromes:
 
 // "A man, a plan, a canal, Panama!"
@@ -105,5 +118,17 @@ if (mahesh.localeCompare(silentcoder)){
 // "taco cat"
 // "put it up"
 // "Was it a car or a cat I saw?" and "No 'x' in Nixon".
+
+var phraseToCheck = "mom";
+var result = "";
+for (let i = phraseToCheck.length - 1; i >= 0; i--) {
+    result += phraseToCheck.charAt(i);
+}
+if (result === phraseToCheck) {
+    console.log("input string is palindrome");
+} else {
+    console.log("input string is not palindrome");
+}
+
 
 // Hint: If you use Google to help you to find solution to this iteration, you might run into some solutions that use advanced string or array methods (such as join(), reverse(), etc.). However, try to apply the knowledge you currently have since you can build pretty nice solution with just using for loop, if-else statements with some break and continue... Just sayin' 
