@@ -161,4 +161,6 @@ for (let i = phraseToCheck.length; i >= 0; i--) {
 
 if (phraseToCheck === revesePhraseToCheck) {
   console.log("The given string is Palindrome.");
+} else {
+  console.log("The given string is not a Palindrome.");
 }
